@@ -12,7 +12,13 @@ get '/bent' do
     'loser'
 end
 
-get '/cat' do
-   @random = ["pig", "dog", "lizard"].sample
-  erb(:index)
+get '/random-cat' do
+    @name = ["pig", "dog", "lizard"].sample
+    erb(:index)
 end
+
+get '/named-cat' do
+    p params[:name]
+   @name = params[:name]
+   erb(:index)
+ end
