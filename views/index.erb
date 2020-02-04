@@ -5,3 +5,11 @@
 <h2>
 My name is <%=@name%>
 </h2>
+
+<% if @name == nil %> 
+<form action="/named-cat" method="post"> 
+<input type="text" name="name">
+<input type="submit" value="Submit">
+</form>
+<% end %> 
+
